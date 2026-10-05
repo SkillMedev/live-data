@@ -1,16 +1,17 @@
 # Live Data
 
-**Free, keyless, liveness-verified APIs for real data - Claude executes instead of deliberating.** — built in-house by [Skill&nbsp;Me](https://skillme.dev).
+**Free, keyless, liveness-verified APIs for real data - Claude executes instead of deliberating.** — built in-house by [Skill&nbsp;Me](https://skillme.dev/?utm_source=github&utm_medium=readme&utm_campaign=pack-live-data).
 
 Reach for this when a task needs real data - weather, geocoding, FX and crypto, earthquakes and NASA imagery, country statistics, dictionary and Wikipedia lookups, trivia, or realistic fake data for a demo - and you want Claude to hit a working free API on the first try instead of deliberating over a directory or reaching for key-walled defaults like OpenWeatherMap and Google Maps from training memory. Each skill names one ranked default per need with exact URL templates, real response shapes with field names and units, and the rate-limit and encoding gotchas that break naive integrations. Every endpoint is probed live (HTTP 200, parseable JSON, under 2s) by a rerunnable health check committed alongside the skills; dead and key-walled APIs are called out by name so they never get cited. A router skill owns the vague 'I need real data for X' trigger and dispatches to the right domain skill. Sourced and liveness-verified from the public-apis project (MIT).
 
-⭐ **If this is useful, star the repo** — it's how we gauge what to build next.
-
 ## Install
 
-- **From the catalog:** [skillme.dev/pack/live-data](https://skillme.dev/pack/live-data) — install the whole pack into Claude in one step.
+- **Claude, ChatGPT, Codex, Cursor (connector):** [install the whole pack from skillme.dev](https://skillme.dev/pack/live-data?utm_source=github&utm_medium=readme&utm_campaign=pack-live-data) — one connection, then ask for any skill by name.
+- **As files for Codex, Cursor, or Claude Code:** `npx @skillme/cli add public-data-api-picker weather-climate geo-places finance-fx space-earth-science government-open-data test-placeholder-data language-reference fun-content --target all`
 - **With the skills CLI:** `npx skills add SkillMedev/live-data`
-- **Manually:** copy any `skills/<slug>/SKILL.md` into your Claude skills directory.
+- **Manually:** copy any `skills/<slug>/SKILL.md` into `.agents/skills/`, `.cursor/skills/`, or `.claude/skills/`.
+
+⭐ **If this is useful, star the repo** — it's how we gauge what to build next.
 
 ## Skills in this pack
 
@@ -27,4 +28,4 @@ Reach for this when a task needs real data - weather, geocoding, FX and crypto, 
 ## License
 
 MIT — see [LICENSE](LICENSE). Skills are portable `SKILL.md` files; the canonical
-copies live in the [Skill&nbsp;Me catalog](https://skillme.dev).
+copies live in the [Skill&nbsp;Me catalog](https://skillme.dev/browse?utm_source=github&utm_medium=readme&utm_campaign=pack-live-data).
